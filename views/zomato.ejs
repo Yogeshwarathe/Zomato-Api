@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zomato</title>
+	<!-- <link href="/zomato.css" rel="stylesheet" type="text/css" > -->
+	<!-- this is use for import css file -->
+	<link rel="stylesheet" type="text/css" href="style.css"> 
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+	<link rel="icon" href="https://www.apkmirror.com/wp-content/uploads/2019/01/5c3750111e19e-384x384.png">
+
+
+	<!-- <style type="text/css">
+		body{
+			margin: 0;
+			background: #e5e5e5;
+
+		}
+		.header h1{
+			text-align: center;
+			font-family: 'Lato', sans-serif;
+			color: #fff;
+		}
+		.header{
+			background-color: red;
+			padding: 2px;
+		}
+		.content img{
+			width: 430px;
+			height: 300px;
+			border-radius: 15px; 
+		}
+		.content{
+			height: 300px;
+			background-color: white;
+			margin: 0vw 9.8vw;
+			border-radius: 12px 0px 0px 10px;
+		}
+		.text{
+			margin: -23vw 0px 0px 31.7vw;
+		}
+		.text h1{
+			font-size: 28px;
+			color: red;
+			margin-top: 150px;
+		}
+		.text p{
+			font-size: 20px;
+			font-weight: bold;
+			color: green;
+		}
+		.details{
+			margin-left:150px;
+			margin-top: 10px;
+		}
+		.key{	
+			padding-right: 20px;
+			font-size: 20px;
+		}
+		/*this is use for make page in responsive*/
+		@media only screen and (max-width: 1120px) { 
+		  body {
+		    background-color: blue;
+		  }
+		}
+	</style> -->
+</head>
+<body>
+	<div class="header">
+		<h1>Zomato</h1>
+	</div>
+	<br>
+	<br>
+	<% for (var i of data) { %>
+
+	<div class="content">
+		<div class="image">
+		<% if (i.featured_image!= ''){ %>
+			<img src= <%= i.featured_image %> >
+		<% } else { %>
+			<img src="https://mk0restaurantsbkd2xc.kinstacdn.com/wp-content/uploads/2016/06/Restaurants-in-Brighton.jpg">
+		<% } %>
+		<!-- <img src= <%= i.featured_image %> > -->
+		</div>
+		<div class="text">
+			<center><h1><%= i.name %></h1></center>
+			<center><p class="address"><%= i.address %></p></center>
+			<hr>
+			<table class="details">
+				<tr>
+					<td class="key">Average Cost For Two   : </td>
+					<td><%= i.average_cost_for_two %></td>
+				</tr>
+				<tr>
+					<td class="key">Price Range   : </td>
+					<td><%= i.price_range %></td>
+				</tr>
+				<tr>
+					<td class="key">Has Online Delivery   : </td>
+					<td><%= i.has_online_delivery %></td>
+				</tr>
+				<tr>
+					<td class="key">Cuisines   : </td>
+					<td><%= i.cuisines %></td>
+				</tr>
+				<tr>
+					<td class="key">City   :</td>
+					<td><%= i.city %></td>
+				</tr>
+				<tr>
+					<td class="key">Locality   :</td>
+					<td><%= i.locality %></td>
+				</tr>
+				
+			</table>
+		</div>
+
+
+	</div>
+	<br>
+	<br>
+
+	<% } %>
+
+</body>
+</html>
