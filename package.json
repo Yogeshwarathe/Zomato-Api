@@ -1,0 +1,18 @@
+{
+  "name": "zomato-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "zomato_api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yogesh",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "ejs-html": "^5.1.5",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "zomato": "^1.1.0"
+  }
+}
